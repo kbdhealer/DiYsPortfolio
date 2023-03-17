@@ -1,13 +1,106 @@
 <!DOCTYPE html>
 <html lang="en"></html>
-<head> 
-    <meta charset="UTF-8">
-    <title>D!Y's Portfolio</title>
-    <link lel="stylesheet" href="design/main.css">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" /> -->
+  <title>D!Y's Portfolio</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <script>
+    let height1 = 0;
+    let height2 = 0;
+    let height3 = 0;
+    // $(window).scroll(window.setTimeout(asdf,200));
+    // function asdf() {
+      
+      $(window).scroll(function() {
+      height1 = $(".introduce").height();
+      height2 = $(window).scrollTop();
+      height3 = $(window).height();
+      console.log(height1);
+      console.log(height2);
+      console.log(height3);
+      console.log("--------------");
+      if (height1 - height3 < height3) {
+        $("html,body").animate(
+          {
+            scrollTop: $(".main").offset().top,
+          },
+          2000
+        );
+      }})
+    
+
+
+    $(document).ready(function () {
+      $(".hamburgerBtn").click(function () {
+        $(".hmbgBtnTgl").stop().slideToggle(200);
+      });
+      $(window).scroll(function () {
+        height2 = $(window).height();
+      });
+    });
+
+    // $('.main').stop().animate({})
+    // $(document).ready(function () {
+    //   $(".hamburgerBtn").click(function () {
+    //     $(".hmbgBtnTgl").animate({
+    //       visibility: 'toggle',
+    //       opacity: '0.7',
+    //     }, "slow");
+    //   });
+    // });
+
+    function funcHmbgBtn(x) {
+      x.classList.toggle("change");
+    }
+
+    // $(".hamburgerBtn").click(
+    //   function () {
+    //     $("ul", this).stop().slideToggle(200);
+    //   }
+    // );
+  </script>
 </head>
 
 <body>
-    <div class="container">
-        <h1>Hello world!</h1>
+  <header class="header">
+    <div class="hamburgerBtn" onclick="funcHmbgBtn(this)">
+      <div class="bars">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </div>
+      <div class="hmbgTglBox">
+        <ul class="hmbgBtnTgl" style="display: none">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About Me</a></li>
+          <li><a href="#">Skills</a></li>
+          <li><a href="#">Experiences</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
     </div>
+  </header>
+  <section class="introduce">
+    <div class="bgImage">
+      <div class="introduceBox">
+        <p>Hello I'm</p>
+        <br />
+        <p>Dong-in Yun</p>
+        <br />
+        <p>Software Developer</p>
+        <p></p>
+      </div>
+      <section class="about">about me</section>
+    </div>
+  </section>
+
+  <section class="main">
+    <section class="skills">skills</section>
+    <section class="experiences">experiences</section>
+    <section class="game">game</section>
+  </section>
+  <footer class="footer">contact</footer>
 </body>
