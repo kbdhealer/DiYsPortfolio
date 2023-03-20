@@ -11,6 +11,7 @@
     let height1 = 0;
     let height2 = 0;
     let height3 = 0;
+    let lastScrTop=0;
     // $(window).scroll(window.setTimeout(asdf,200));
     // function asdf() {
       
@@ -21,15 +22,28 @@
       console.log(height1);
       console.log(height2);
       console.log(height3);
+      console.log(lastScrTop);
       console.log("--------------");
-      if (height1 - height3 < height3) {
+      if(height2>lastScrTop){
+        //scroll down
+        if ((height1 - height3 < height2)&&((height2+2)<height1)) {
         $("html,body").animate(
           {
             scrollTop: $(".main").offset().top,
           },
           2000
         );
-      }})
+      
+        lastScrTop=height2;}
+      else {
+        //scroll up
+        lastScrTop=height2;
+      }
+      
+      }
+    
+      lastScrTop=height2;
+    })
     
 
 
@@ -91,7 +105,7 @@
         <p>Dong-in Yun</p>
         <br />
         <p>Software Developer</p>
-        <p></p>
+        <p>Not neither a brand new graduate nor having professional experiences, you'll see something different in my page!</p>
       </div>
       <section class="about">about me</section>
     </div>
