@@ -108,6 +108,7 @@ body, html {
 .introduceBox {
   z-index: 2;
   padding: 100px;
+  padding-top: 200px;
   height: 60%;
 }
 .about {
