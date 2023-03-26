@@ -85,7 +85,7 @@ body, html {
   /* background-position: center center; */
   /* object-fit: none; */
 }
-.bgImage {
+.bgArea {
   margin: 0;
   padding: 0;
   z-index: -1;
@@ -107,17 +107,53 @@ body, html {
 
 .introduceBox {
   z-index: 2;
-  padding: 100px;
   padding-top: 200px;
   height: 60%;
+  display: flex;
+  justify-content: space-evenly;
+  ;
+}
+
+.mainDesc {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+}
+.portraitImg {
+  border-radius: 25%;
+  height: 300px;
 }
 .about {
   /* min-height: 70vh; */
   z-index: 2;
   height: 40%;
-  display: block;
+  width: 100%;
+  padding-left: 5%;
+  padding-right: 5%;
+  display: flex;
+  flex-flow: row wrap;
   font-size: 10rem;
   background-color: rgba(200, 200, 200, 0.7);
+}
+
+.aboutTitle {
+  width: 100%;
+}
+.aboutDesc {
+  font-size: 25px;
+  width: 50%;
+  /* display:flex;
+  flex-flow: column wrap; */
+}
+
+.aboutImgArea {
+  width: 50%;
+  display:flex;
+  flex-flow: column wrap;
+  align-content: center;
+}
+.aboutImg {
+  height:200px;
 }
 .main {
   display: flex;
@@ -134,10 +170,13 @@ body, html {
   /* justify-content: center;
   align-items: center; */
   position: relative;
-  font-size: 10rem;
   background-color: #5e89c5;
 }
 
+.skillTitle {
+
+  font-size: 10rem;
+}
 .experiences {
   height: 100vh;
   /* width: 100vw; */
