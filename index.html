@@ -6,7 +6,7 @@
   <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" /> -->
   <title>D!Y's Portfolio</title>
   <link rel="stylesheet" href="css/style.css" />
-  
+  <script src="https://kit.fontawesome.com/3c82db6bb3.js" crossorigin="anonymous"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
   <script type="text/javascript" src="scripts/index.js" ></script>
 
@@ -52,7 +52,7 @@
         </div>
         <div class="portrait"><img src="images/photo.jpg" class="portraitImg"></div>
         </div>
-        <div class="about"><span class="aboutTitle">about me</span>
+        <div class="about"><span class="sectionTitle">about me</span>
           <div class="aboutDesc">
             <p>Ever since I was an elementary school boy, 
               taught myself to operate DOS for playing games and 
@@ -72,31 +72,83 @@
     </div>
 
     <div class="main">
-      <div class="skills"><span class="skillTitle">skills</span>
+      <div class="skills"><span class="sectionTitle">skills</span>
         <div class="mainSkill">
-          <ul>
-            <li>Html</li>
-            <li>Css</li>
-            <li>Sass</li>
-            <li>Javascript</li>
-            <li>Jquery</li>
-            <li>Java</li>
-            <li>C++</li>
-            <li>SQL</li>
-            <li>Github</li>
-          </ul>
+          <span>Main Skill Set</span>
+          <div class="skillList">
+            <div>Html</div>
+            <div>Css</div>
+            <div>Sass</div>
+            <div>Javascript</div>
+            <div>Jquery</div>
+            <div>Java</div>
+            <div>C++</div>
+            <div>SQL</div>
+            <div>Github</div>
+          </div>
         </div>
         <div class="progressSkill">
-          <ul>
-            <li>React</li>
-            <li>Typescript</li>
+          <span>Skills in Progress</span>
+          <div class="skillList">
+            <div>React</div>
+            <div>Node.js</div>
+            <div>Typescript</div>
             
-          </ul>
+          </div>
         </div>
       </div>
-      <div class="experiences">experiences</div>
+      <div class="experiences"><span class="sectionTitle">experiences</span>
+        <div class="expContainer">
+        <div class="eduLine">
+          <div class="expBox left">
+            <h2>Diploma in Software Development</h2>
+            <h3>Southern Alberta Institute of Technology (GPA: 3.82 / 4)</h3>
+            <p>Studied modern front-end languages including HTML5/CSS3, Javascript and Jquery<br>
+              and also studied Java, Oracle SQL, RDBMS and MVC models.
+            </p>
+            <p class="expDura">Sep 2019 ~ Apr 2021</p>
+          </div>
+          <div class="expBox left">
+            <h2>Associate Degree of Electronics </h2>
+            <h3>Inha Technical College (GPA: 4.2 / 4.5)</h3>
+            <p>Studied C / C++ for real-time embedded programming.
+            </p>
+            <p class="expDura">Mar 2006 ~ Feb 2011</p>
+          </div>
+        </div>
+        <div class="expLine">
+          <div class="expBox right">
+            <h2>SMT Technician</h2>
+            <h3>Blackline Safety</h3>
+            <p>Operated SMT(Surface Mount Technology) production equipment.<br>
+              Performed preventive maintenance on the equipment.
+            </p>
+            <p class="expDura">Mar 2006 ~ Feb 2011</p>
+          </div>
+          <div class="expBox right">
+            <h2>Private Coding Tutor</h2>
+            <h3>Calgary</h3>
+            <p>Taught Java for career development of of a person working as a chemical engineer.
+            </p>
+            <p class="expDura">Nov 2020 ~ Jun 2021</p>
+          </div>
+        </div>
+      </div>
+    </div>
       <!-- <section class="game">game</section> -->
     </div>
-    <footer class="footer">contact</footer>
+    <footer class="footer">contact
+      <i class="fa-solid fa-phone fa-xl"></i>
+      
+      <i class="fa-solid fa-envelope fa-xl"></i>
+      <i class="fa-brands fa-linkedin fa-xl"></i>
+      <i class="fa-brands fa-github fa-xl"></i>
+      <form class="contactForm" action="https://formsubmit.co/diyun.dev@gmail.com" method="POST" />
+      <input type="hidden" name="_subject" value="New message sent via portfolio!">
+      <input type="hidden" name="_next" value="https://kbdhealer.github.io/thankyou.html">
+      <input type="name" name="name" required>
+      <input type="email" name="email" required>
+      <input name="message" required>
+    </footer>
   </div>
 </body>

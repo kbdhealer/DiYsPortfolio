@@ -28,7 +28,6 @@ body, html {
 .hmbgBtnTgl {
   position: relative;
   display: block;
-  /* top: 30px; */
   width: max-content;
   
 }
@@ -62,34 +61,18 @@ body, html {
   transform: translate(0, -11px) rotate(45deg);
 }
 
-/* .w3-text-grey {
-  min-height: 2vh;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  justify-content: end;
-  padding-right: 2vh;
-  position: fixed;
-  width: 100%;
-} */
-
 .introduce {
   margin: 0;
   padding: 0;
   z-index: 1;
   display: flex;
   min-height: 100vh;
-  /* width: 100vw; */
   font-size: 2rem;
-  /* overflow:hidden; */
-  /* background-position: center center; */
-  /* object-fit: none; */
 }
 .bgArea {
   margin: 0;
   padding: 0;
   z-index: -1;
-  /* position:relative; */
   background-image: url("../images/MK4_6838.JPG");
   background-size: cover;
   background-position: center;
@@ -99,7 +82,6 @@ body, html {
   height: 100%;
   width: 100%;
   font-size: 2rem;
-  /* overflow-x:hidden; */
   aspect-ratio: 2/3;
   background-position: center center;
   object-fit:none;
@@ -124,10 +106,9 @@ body, html {
   height: 300px;
 }
 .about {
-  /* min-height: 70vh; */
   z-index: 2;
   height: 40%;
-  width: 100%;
+  width: 90%;
   padding-left: 5%;
   padding-right: 5%;
   display: flex;
@@ -136,14 +117,13 @@ body, html {
   background-color: rgba(200, 200, 200, 0.7);
 }
 
-.aboutTitle {
-  width: 100%;
+.sectionTitle {
+  width: 90%;
+  font-size: 10rem;
 }
 .aboutDesc {
   font-size: 25px;
   width: 50%;
-  /* display:flex;
-  flex-flow: column wrap; */
 }
 
 .aboutImgArea {
@@ -159,34 +139,196 @@ body, html {
   display: flex;
   flex-direction: column;
   z-index: 1;
-  /* overflow:scroll; */
   height: 200vh;
   width: 100%;
 }
 
 .skills {
   height: 100vh;
-  /* width: 100vw; */
-  /* justify-content: center;
-  align-items: center; */
-  position: relative;
+  padding-left: 5%;
+  padding-right: 5%;
+  display: flex;
+  flex-flow: column;
   background-color: #5e89c5;
+  justify-content: center;
 }
 
-.skillTitle {
 
-  font-size: 10rem;
+.mainSkill {
+  height: 30vh;
+  width: 90%;
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.skillList {
+  margin: 50px;
+  padding: 0;
+  display: flex;
+  flex-flow: row wrap;
+  flex : 0 0 4rem;
+  width: 100%;
+  /* height: 5rem; */
+  align-items: center;
+  justify-content: center;
+}
+
+.skillList div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 5px solid;
+  border-radius: 50rem;
+  margin: 1rem;
+  padding : 1em 1.5em;
+  width: 15rem;
+  flex: 0 0 4rem;
+  height: 2rem;
+  font-size: 2rem;
+  font-weight: 500;
+  
+}
+.progressSkill {
+  height: 30vh;
+}
+
+.skills li {
+  margin-right: 5%;
+  margin-bottom: 5%;
+  width: 30%;
+  height: 50px;
+  /* padding-right: 150px;
+  padding-bottom: 50px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-style:solid;
+  border-radius: 40%;
 }
 .experiences {
   height: 100vh;
-  /* width: 100vw; */
-  /* justify-content: center;
-  align-items: center; */
-  /* display: grid; */
-  font-size: 10rem;
+  padding-left: 5%;
+  padding-right: 5%;
+  display: flex;
+  flex-flow: column;
   background-color: #9380c5;
+  justify-content: center;
+  /* box-sizing: border-box; */
+}
+
+
+
+
+
+
+.expContainer {
+  position: re;
+  display: flex;
+  flex-flow: row wrap;
+  margin: 0 auto;
+}
+
+.eduLine {
   position: relative;
 }
+
+.eduLine::before {
+  content: '';
+  position: absolute;
+  width: 5px;
+  background-color: white;
+  top: 10px;
+  bottom: 0;
+  left: 0;
+  margin-left: -15px;
+}
+
+.expLine {
+  position: relative;
+}
+
+.expLine::after {
+  content: '';
+  position: absolute;
+  width: 5px;
+  background-color: white;
+  top: 10px;
+  bottom: 0;
+  right: 0;
+  margin-right: -55px;
+}
+
+.expBox {
+  /* width: 100%; */
+  background-color: white;
+  padding: 20px 30px;
+  position: relative;
+  border-radius: 5px;
+}
+
+.expBox::after {
+  left:50px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+}
+/* Place the container to the left */
+.left {
+  left: 0;
+}
+
+/* Place the container to the right */
+.right {
+  left: 5%;
+}
+
+/* Add arrows to the left container (pointing right) */
+.left::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: medium solid white;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent white;
+}
+
+/* Add arrows to the right container (pointing left) */
+.right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+}
+
+/* Fix the circle for containers on the right side */
+.right::after {
+  left: -16px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .game {
   height: 100vh;
@@ -207,6 +349,8 @@ body, html {
   position: relative;
   bottom: 0;
   
-  /* justify-content: center;
-  align-items: center; */
+}
+
+i {
+  color: #6f88b3;
 }
