@@ -6,7 +6,9 @@
   <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" /> -->
   <title>D!Y's Portfolio</title>
   <link rel="stylesheet" href="css/style.css" />
-  <script
+  <style>@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap');
+  </style>
+<script
     src="https://kit.fontawesome.com/3c82db6bb3.js"
     crossorigin="anonymous"
   ></script>
@@ -24,26 +26,25 @@
       </div>
       <div class="hmbgTglBox">
         <ul class="hmbgBtnTgl" style="display: none">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About Me</a></li>
-          <li><a href="#">Skills</a></li>
-          <li><a href="#">Experiences</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="#top">Home</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#experiences">Experiences</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
     </div>
   </header>
   <div class="flexContainer">
-    <div class="introduce">
+    <div class="introduce" id="top">
       <div class="bgArea">
         <div class="introduceBox">
           <div class="mainDesc">
             <p>
-              <span>Hello I'm</span>
+              <span id="helloIm">Hello I'm</span>
               <br />
-              <span>Dong-in</span> <span>Yun<br /></span>
-              <span>Software Developer<br /></span>
-              <span>
+              <span id="dongin">Dong-in</span> <span id="yun">Yun<br /></span>
+              <span id="sd">Software Developer<br /></span>
+              <span class="fontText">
                 Neither be a brand new graduate <br />
                 nor have professional experiences,<br />
                 but you'll see something different on my page!
@@ -61,7 +62,7 @@
         <div class="about">
           <span class="sectionTitle">about me</span>
           <div class="aboutDesc">
-            <p>
+            <p class="fontText" id="aboutText">
               Ever since I was an elementary school boy, taught myself to
               operate DOS for playing games and edited memory values to apply
               cheats.<br />
@@ -81,10 +82,10 @@
     </div>
 
     <div class="main">
-      <div class="skills">
+      <div class="skills" id="skills">
         <span class="sectionTitle">skills</span>
         <div class="mainSkill">
-          <span>Main Skill Set</span>
+          <span class="skillSetTitle">Main Skill Set</span>
           <div class="skillList">
             <div>Html</div>
             <div>Css</div>
@@ -98,7 +99,7 @@
           </div>
         </div>
         <div class="progressSkill">
-          <span>Skills in Progress</span>
+          <span class="skillSetTitle">Skills in Progress</span>
           <div class="skillList">
             <div>React</div>
             <div>Node.js</div>
@@ -106,7 +107,7 @@
           </div>
         </div>
       </div>
-      <div class="experiences">
+      <div class="experiences" id="experiences">
         <span class="sectionTitle">experiences</span>
         <div class="expContainer">
           <div class="expTimeLine">
@@ -165,17 +166,32 @@
       <span class="sectionTitle">contact</span>
       <div class="contactContainer">
         <div class="contactLeft">
-          <div><i class="fa-solid fa-phone fa-xl"></i><span class="contactTxt">587-579-7648</span></div>
-          <div><i class="fa-solid fa-envelope fa-xl"></i><span class="contactTxt">diyun.dev@gmail.com</span></div>
-          <div><i class="fa-solid fa-location-dot fa-xl"></i><span class="contactTxt">101-1078 6Ave SW Calgary AB</span></div>
+          <div>
+            <i class="fa-solid fa-phone fa-xl"></i
+            ><span class="contactTxt">587-579-7648</span>
+          </div>
+          <div>
+            <i class="fa-solid fa-envelope fa-xl"></i
+            ><span class="contactTxt">diyun.dev@gmail.com</span>
+          </div>
+          <div>
+            <i class="fa-solid fa-location-dot fa-xl"></i
+            ><span class="contactTxt">101-1078 6Ave SW Calgary AB</span>
+          </div>
           <div><span class="contactMore">find out more</span></div>
-          <div><a href="https://www.linkedin.com/in/keyboardhealer"><i class="fa-brands fa-linkedin fa-xl"></i></a>
-          <a href="https://kbdhealer.github.io"><i class="fa-brands fa-github fa-xl"></i></a></div>
+          <div>
+            <a href="https://www.linkedin.com/in/keyboardhealer"
+              ><i class="fa-brands fa-linkedin fa-xl"></i
+            ></a>
+            <a href="https://github.com/kbdhealer/kbdhealer.github.io"
+              ><i class="fa-brands fa-github fa-xl"></i
+            ></a>
+          </div>
         </div>
         <div class="contactRight">
           <form
             class="contactForm"
-            id="contactForm"
+            id="contactFnc"
             action="https://formsubmit.co/diyun.dev@gmail.com"
             method="POST"
           >
@@ -187,7 +203,7 @@
             <input
               type="hidden"
               name="_next"
-              value="https://kbdhealer.github.io/index.html#contactForm"
+              value="https://kbdhealer.github.io/index.html#contactFnc"
             />
             <label for="contactName">Name</label>
             <input type="name" name="name" id="contactName" required />

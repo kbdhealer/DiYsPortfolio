@@ -99,3 +99,4 @@ $(document).ready(function () {
 function funcHmbgBtn(x) {
   x.classList.toggle("change");
 }
+
