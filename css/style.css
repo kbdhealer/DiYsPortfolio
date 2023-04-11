@@ -717,9 +717,7 @@ label {
   color: rgb(64, 82, 53);
 }
 
-@media only screen and (max-width:650px) {
 
-}
 /* @media screen and (max-height:1760px) {
   
   .main {
@@ -754,6 +752,27 @@ button:hover {
 button:active {
   background-color: rgb(245, 243, 221);
   transform: translateY(0.3rem);
+}
+
+@media only screen and (max-width:650px) {
+  .contactLeft {
+    width: 20rem;
+    height: 20rem;
+    margin: 1rem 2rem;
+    padding: 2rem 1rem;
+  }
+
+  .contactRight {
+    width: 20rem;
+    height: 20rem;
+    margin: 1rem 2rem;
+    padding: 0.5rem 1rem 4rem 2rem;
+  }
+  
+  button {
+    font-weight: 700;
+    font-size: 2rem;
+  }
 }
 @media only screen and (max-width:992px), (max-height:1350px)  {
   .sectionTitle {
