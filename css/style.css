@@ -4,6 +4,7 @@ body, html {
   clear: both;
   padding: 0;
   height: 100%;
+  width: 100%;
   font-family: 'Roboto', sans-serif;
 }
 
@@ -76,7 +77,7 @@ body, html {
   padding: 0;
   z-index: 1;
   display: flex;
-  min-height: 100vh;
+  min-height: 170rem;
   font-size: 2rem;
 }
 .bgArea {
@@ -91,7 +92,7 @@ body, html {
   display: flex;
   flex-flow: column;
   height: 100%;
-  min-height: 100vh;
+  min-height: 170rem;
   width: 100%;
   font-size: 2rem;
   aspect-ratio: 2/3;
@@ -103,20 +104,30 @@ body, html {
   z-index: 2;
   /* padding-top: 20%; */
   /* height: 60%; */
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
   flex: 1 1 auto;
   align-items: center;
   justify-content: space-evenly;
-  ;
+  
 }
 
 .mainDesc {
   display: flex;
   flex-flow: column;
+  /* flex-wrap: wrap; */
   align-items: center;
+  width: 55%;
+  min-width: 30rem;
 }
 
+/* .mainDesc p {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  
+} */
 #helloIm {
   font-size: 5rem;
   font-weight: 700;
@@ -146,12 +157,41 @@ body, html {
   font-size: 1.5rem;
   font-weight: 300;
   /* padding-top: 2rem; */
+  margin-top: 0;
 }
 
 .mainDesc div {
   display: flex;
-  width: 50%;
+  flex-flow: row wrap;
+  width: 100%;
+  /* align-items: center; */
+  justify-content: center;
 }
+
+.mainDesc div #button1, #button2 {
+  font-weight: 700;
+  font-size: 3rem;
+  color: inherit;
+  width: 15rem;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  margin-right: 1rem;
+  border-radius: 50rem;
+  background-color: rgb(247, 246, 236);
+  border-color: rgb(201, 196, 140);
+  border: 2rem;
+  box-shadow: 0.5rem 0.5rem 0.5rem rgb(121, 118, 116);
+}
+
+.mainDesc div #button1:hover {
+  background-color: rgb(54, 51, 19);
+}
+
+.mainDesc div #button1:active {
+  background-color: rgb(245, 243, 221);
+  transform: translateY(0.3rem);
+}
+
 .portrait {
   display: flex;
   justify-content: center;
@@ -247,13 +287,15 @@ body, html {
   flex-direction: column;
   z-index: 1;
   height: 200vh;
+  min-height: 200rem;
   width: 100%;
+  clear: both;
 }
 
 .skills {
   height: 50%;
   /* flex-grow: 1; */
-  /* min-height: 100vh; */
+  min-height: 80rem;
   /* padding-left: 5%;
   padding-right: 5%; */
   display: flex;
@@ -358,7 +400,7 @@ body, html {
 }
 .experiences {
   height :50%;
-  min-height: max-content;
+  min-height: 110rem;
   display: flex;
   flex-flow: column;
   flex: 1 1 auto;
@@ -371,9 +413,9 @@ body, html {
 }
 
 
-.aaContainer {
+.expContainer {
   /* height: 100%; */
-  min-height: 50vh;
+  /* min-height: 100rem; */
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -381,11 +423,12 @@ body, html {
   justify-content: center;
   clear: both;
   flex-grow: 1;
+  /* padding-left: 5%; */
 }
 
 
 
-.expContainer {
+.expContentArea {
   position: relative;
   display: flex;
   flex-flow: column;
@@ -396,6 +439,7 @@ body, html {
   /* max-width: 1300px; */
   /* margin-bottom: 0; */
   /* bottom: 0; */
+  align-items: center;
   margin-top: 1rem;
   box-sizing: inherit;
   /* clear: both; */
@@ -424,7 +468,7 @@ body, html {
   position: relative;
   background-color: inherit;
   width: 100%;
-  max-width: 800px;
+  max-width: 80rem;
   left: 0;
   flex-grow: 1;
 }
@@ -435,12 +479,12 @@ body, html {
   content: " ";
   height: 0;
   position: absolute;
-  top: 22px;
+  top: 1.5rem;
   width: 0;
   z-index: 1;
-  left: 30px;
+  left: 1.5rem;
   border: medium solid white;
-  border-width: 10px 10px 10px 0;
+  border-width: 1rem 1rem 1rem 0;
   border-color: transparent white transparent transparent;
 }
 
@@ -452,8 +496,8 @@ body, html {
   height: 25px;
   right: -17px;
   background-color: white;
-  border: 4px solid #FF9F55;
-  top: 15px;
+  border: 0.3rem solid #ffc21bd2;
+  top: 1.5rem;
   border-radius: 50%;
   z-index: 1;
   left: -16px;
@@ -593,12 +637,14 @@ i {
   flex-flow: column;
   background-color: rgb(199, 216, 231);
   border-radius: 2rem;
-  padding: 3rem 2rem;
-  margin: 2rem 3rem;
-  width: 30rem;
+  padding: 2rem 2rem;
+  padding-bottom: 0;
+  margin: 2rem 2.5rem;
+  width: 25rem;
   min-width: 25rem;
   height: 25rem;
   box-shadow: 1.3rem 1.3rem 0.5rem rgb(134, 137, 158);
+  justify-content: center;
 }
 
 .contactLeft div {
@@ -623,15 +669,16 @@ i {
 }
 .contactRight {
   border-radius: 2rem;
-  padding: 3rem 2rem;
-  margin: 2rem 3rem;
-  width: 30rem;
+  padding: 2rem 2rem;
+  padding-bottom: 0;
+  margin: 2rem 2.5rem;
+  width: 25rem;
   min-width: 25rem;
   height: 25rem;
   background-color: rgb(235, 231, 226);
   display: flex;
   flex-flow: column;
-  box-shadow: 1.3rem 1.3rem 0.5rem rgb(121, 118, 116);;
+  box-shadow: 1.3rem 1.3rem 0.5rem rgb(121, 118, 116);
 }
 .contactForm {
   display: flex;
@@ -642,21 +689,25 @@ i {
 input {
   background-color: transparent;
   border: solid rgb(64, 82, 53);
-  border-width: 0 0 3px 0;
-  margin: 5px 10px 30px 10px;
+  border-width: 0 0 0.2rem 0;
+  margin: 0.5rem 1rem;
+  width: 90%;
 }
 
 input:focus {
   outline: none;
 }
 label {
-  margin-top: 20px;
-  margin-left: 10px;
+  margin-top: 2rem;
+  margin-left: 1rem;
   font-weight: 400;
   font-size: 1.7rem;
   color: rgb(64, 82, 53);
 }
 
+@media only screen and (max-width:650px) {
+
+}
 /* @media screen and (max-height:1760px) {
   
   .main {
@@ -673,11 +724,24 @@ label {
 button {
   font-weight: 700;
   font-size: 3rem;
-  width: 30rem;
+  width: 100%;
+  min-width: 5rem;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
   border-radius: 50rem;
   background-color: rgb(247, 246, 236);
   border-color: rgb(201, 196, 140);
   border: 2rem;
+  box-shadow: 0.5rem 0.5rem 0.5rem rgb(121, 118, 116);
+}
+
+button:hover {
+  background-color: rgb(245, 243, 221);
+}
+
+button:active {
+  background-color: rgb(245, 243, 221);
+  transform: translateY(0.3rem);
 }
 @media only screen and (max-width:992px), (max-height:1350px)  {
   .sectionTitle {
