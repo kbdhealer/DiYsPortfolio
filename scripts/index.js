@@ -30,10 +30,11 @@ $(window).on("wheel resize DOMMouseScroll", function (event) {
           );
       } else if (
         currTop >= height2 &&
-        bottomPos < height3 + window.innerHeight
+        // bottomPos < height3 + window.innerHeight
+        bottomPos>height3 -2 && currTop <height3
       ) {
         //scroll up
-        if ((height1 = height2))
+        // if ((height1 = height2))
           $("html,body")
             .stop()
             .animate(
@@ -49,12 +50,12 @@ $(window).on("wheel resize DOMMouseScroll", function (event) {
             );
       }
     } else {
-      if (currTop <= height3 && currTop > height2 + 2) {
+      if (currTop <= height3 && currTop > height2 + 2 && bottomPos>height3) {
         $("html,body")
           .stop()
           .animate(
             {
-              scrollTop: $(".skills").offset().top - 2,
+              scrollTop: $(".experiences").offset().top - window.innerHeight,
             },
             1000,
             "swing",

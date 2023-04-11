@@ -1,6 +1,6 @@
 body, html {
   margin: 0;
-  margin-bottom: 100px;
+  /* margin-bottom: 100px; */
   clear: both;
   padding: 0;
   height: 100%;
@@ -66,7 +66,7 @@ body, html {
 }
 
 .flexContainer {
-  padding-bottom: 50rem;
+  /* padding-bottom: 50rem; */
   left: 0;
   position: relative;
   min-height: 100%;
@@ -91,6 +91,7 @@ body, html {
   display: flex;
   flex-flow: column;
   height: 100%;
+  min-height: 100vh;
   width: 100%;
   font-size: 2rem;
   aspect-ratio: 2/3;
@@ -144,8 +145,13 @@ body, html {
 .fontText {
   font-size: 1.5rem;
   font-weight: 300;
+  /* padding-top: 2rem; */
 }
 
+.mainDesc div {
+  display: flex;
+  width: 50%;
+}
 .portrait {
   display: flex;
   justify-content: center;
@@ -163,37 +169,33 @@ body, html {
   position: relative;
   display: flex;
   flex-flow: column;
-  flex: 0 1 1px;
+  flex: 1 1 1px;
   font-size: 10rem;
   background-color: rgba(200, 200, 200, 0.7);
-
 }
 
 .sectionTitle {
   width: 90%;
-  height: 12rem;
+  /* height: 12rem; */
   padding: 5%;
   font-size: 10rem;
   font-weight: 900;
   color: #272a38;
-
+  display: flex;
+  align-items: center;
 }
 
-@media only screen and (max-width:992px) {
-  .sectionTitle {
-    font-size: 7rem;
-  }
-}
 .main .sectionTitle {
   width: 90%;
-  top: 100%;
+  height: 10%;
+  /* top: 100%; */
   padding: 5%;
   font-size: 10rem;
   font-weight: 900;
   align-items: end;
   display: flex;
   color: #272a38;
-
+  overflow-wrap: anywhere;
 }
 .aboutDesc {
   display: flex;
@@ -203,6 +205,7 @@ body, html {
   padding: 0 5%;
   padding-top: 0;
   padding-bottom: 3rem;
+  flex-grow: 1;
 }
 
 .aboutText{
@@ -218,6 +221,7 @@ body, html {
   flex-flow: column wrap;
   align-content: center;
   transition: transform .2s;
+  flex-grow: 1;
 }
 .aboutImg {
   width: 20rem;
@@ -226,7 +230,7 @@ body, html {
 }
 
 
-@media only screen and (max-width: 992px) {
+@media only screen and (max-width: 992px), (max-height:1350px)  {
   .aboutDesc {
     flex-flow: column;
     padding-left: 5%;
@@ -243,45 +247,66 @@ body, html {
   flex-direction: column;
   z-index: 1;
   height: 200vh;
-  min-height: 1520px;
   width: 100%;
 }
 
 .skills {
-  height: 100vh;
-  flex-grow: 1;
-  min-height: 100vh;
+  height: 50%;
+  /* flex-grow: 1; */
+  /* min-height: 100vh; */
   /* padding-left: 5%;
   padding-right: 5%; */
   display: flex;
   flex-flow: column;
   background-color: #7ea9e6;
+  align-items: center;
   justify-content: center;
+  clear: both;
 }
 
+.skillsContainer {
+  min-height: 50vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
 .skillSetTitle {
   font-weight: 700;
   font-size: 5rem;
   color: #2f355c;
   text-align: center;
+  width: 90%;
+}
+
+@media only screen and (max-width:992px), (max-height:1350px)  {
+  .skillSetTitle {
+    font-size: 3rem;
+  }
 }
 .mainSkill {
-  height: 30vh;
-  width: 90%;
+  /* height: 40%; */
+  width: 100%;
   display: flex;
   flex-flow: column;
+  flex-grow: 1;
+  clear: both;
+  align-items: center;
+  justify-content: center;
 }
 
 .skillList {
-  margin: 50px;
+  /* margin: 50px; */
   padding: 0;
   display: flex;
-  flex-flow: row wrap;
-  flex : 0 0 4rem;
-  width: 100%;
-  /* height: 5rem; */
-  align-items: center;
+  /* flex-flow: row wrap; */
+  flex-wrap: wrap;
+  flex : 1 1 4rem;
+  align-content :flex-start;
+  width: 90%;
+  height: 100%;
+  align-items: start;
   justify-content: center;
+  clear: both;
 }
 
 .skillList div {
@@ -316,69 +341,79 @@ body, html {
   background-color: #139cf79a;
 }
 .progressSkill {
-  height: 30vh;
-  width: 90%;
-  display: flex;
-  flex-flow: column wrap;
-}
-
-.skills li {
-  margin-right: 5%;
-  margin-bottom: 5%;
-  width: 30%;
-  height: 50px;
-  /* padding-right: 150px;
-  padding-bottom: 50px; */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-style:solid;
-  border-radius: 40%;
-}
-.experiences {
-  height: 100vh;
-  min-height: 1760px;
-  /* padding-left: 5%;
-  padding-right: 5%; */
+  /* height: 40%; */
+  width: 100%;
   display: flex;
   flex-flow: column;
   flex-grow: 1;
-  background-color: #b59cf5f6;
+  clear: both;
+  align-items: center;
   justify-content: center;
+}
+
+@media only screen and (max-width:992px), (max-height:1350px) {
+  .skillList div {
+    font-size: 1.5rem;
+  }
+}
+.experiences {
+  height :50%;
+  min-height: max-content;
+  display: flex;
+  flex-flow: column;
+  flex: 1 1 auto;
+  /* flex-grow: 1; */
+  background-color: #b59cf5f6;
+  align-items: center;
+  justify-content: center;
+  clear: both;
   /* box-sizing: border-box; */
 }
 
 
-
+.aaContainer {
+  /* height: 100%; */
+  min-height: 50vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  clear: both;
+  flex-grow: 1;
+}
 
 
 
 .expContainer {
   position: relative;
   display: flex;
-  flex-flow: row wrap;
-  align-items: center;
-  justify-content: center;
-  width: 50%;
-  max-width: 1300px;
-  margin: 0 auto;
-  margin-top: 2rem;
+  flex-flow: column;
+  /* flex-grow: 1; */
+  align-items : start;
+  width: 70%;
+  /* height : fit-content; */
+  /* max-width: 1300px; */
+  /* margin-bottom: 0; */
+  /* bottom: 0; */
+  margin-top: 1rem;
   box-sizing: inherit;
+  /* clear: both; */
 }
 
 .expTimeLine {
   width: 100%;
-  
 }
 /* The actual timeline (the vertical ruler) */
 .expTimeLine::before {
   content: '';
   width: 5px;
-  height: 100%;
+  /* height: 100%; */
   position:absolute;
   
   background-color: white;
   top: 0;
+  bottom: 0;
   left: 0rem;
   /* margin-left: -3px; */
 }
@@ -391,6 +426,7 @@ body, html {
   width: 100%;
   max-width: 800px;
   left: 0;
+  flex-grow: 1;
 }
 
 
@@ -430,7 +466,7 @@ body, html {
 
 /* The actual content */
 .content {
-  padding: 20px 30px;
+  padding: 10px 15px;
   background-color: white;
   position: relative;
   border-radius: 6px;
@@ -440,19 +476,23 @@ body, html {
 .content h2 {
   font-weight: 700;
   font-size: 2.3rem;
-  margin-bottom: 0.5rem;
+  margin: 0.5rem 1rem;
 }
 
 .content h3 {
   font-weight: 400;
   font-size: 1.2rem;
   margin-top: 0.1rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
+  margin-left: 1rem;
 }
 
 .content p {
   font-weight: 300;
   font-size: 1.2rem;
+  margin-top: 0.5rem;
+  margin-left: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .duraBox {
@@ -469,29 +509,64 @@ body, html {
   border-radius: 2rem;
 }
 
-
-.game {
-  height: 100vh;
-  /* width: 100vw; */
-  justify-content: center;
-  align-items: center;
-  display: flex;
-  /* scroll-snap-align: start; */
-  position: relative;
+@media only screen and (max-width:992px), (max-height:1350px)  {
+  .expBox {
+    padding: 10px 20px;
+    position: relative;
+    background-color: inherit;
+    width: 100%;
+    /* max-width: 800px; */
+    left: 0;
+  }
+  .content {
+    padding: 15px 20px;
+    background-color: white;
+    position: relative;
+    border-radius: 6px;
+    box-shadow: 1rem 1rem 0.15rem rgb(53, 56, 95);
+  }
+  .content h2 {
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-bottom: 0.3rem;
+  }
+  
+  .content h3 {
+    font-weight: 400;
+    font-size: 1.3rem;
+    margin-top: 0.1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .content p {
+    font-weight: 300;
+    font-size: 1.1rem;
+  }
+  .expDura {
+    font-weight: 400;
+    font-size: 1rem;
+    text-align: right;
+    width:fit-content;
+    background-color: #ffc21bd2;
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+  }
 }
 
+
 .footer {
-  height: 50rem;
+  /* height: 50rem; */
   width: 100%;
   display: flex;
-  flex-flow: column wrap;
+  flex-flow: column;
+  /* flex: 0 1 auto; */
   font-size: 2rem;
   background-color: #1d1f2c;
-  position: absolute;
-  /* transform: translateY(-100%); */
+  position: relative;
   bottom: 0;
   left: 0;
   right: 0;
+  clear: both;
 }
 
 .contactTitle {
@@ -500,8 +575,9 @@ body, html {
 
 .contactContainer {
   display: flex;
-  /* flex-flow: row wrap; */
-  width: 90%;
+  /* flex-wrap: wrap; */
+  flex-flow: row wrap;
+  width: 100%;
   align-items: center;
   justify-content: center;
 }
@@ -516,14 +592,18 @@ i {
   display: flex;
   flex-flow: column;
   background-color: rgb(199, 216, 231);
-  border-radius: 5px;
-  padding: 35px 25px;
-  margin: 20px 30px;
-  width: 450px;
-  height: 350px;
+  border-radius: 2rem;
+  padding: 3rem 2rem;
+  margin: 2rem 3rem;
+  width: 30rem;
+  min-width: 25rem;
+  height: 25rem;
   box-shadow: 1.3rem 1.3rem 0.5rem rgb(134, 137, 158);
 }
 
+.contactLeft div {
+  width: 110%;
+}
 .contactTxt {
   font-weight: 400;  
   font-size: 1.5rem;
@@ -542,20 +622,21 @@ i {
   margin-top: 2rem;
 }
 .contactRight {
-  width: 450px;
-  height: 350px;
-  padding: 35px 25px;
-  margin: 20px 30px;
+  border-radius: 2rem;
+  padding: 3rem 2rem;
+  margin: 2rem 3rem;
+  width: 30rem;
+  min-width: 25rem;
+  height: 25rem;
   background-color: rgb(235, 231, 226);
   display: flex;
   flex-flow: column;
-  border-radius: 5px;
   box-shadow: 1.3rem 1.3rem 0.5rem rgb(121, 118, 116);;
 }
 .contactForm {
   display: flex;
   flex-flow: column wrap;
-  width: 450px;
+  width: 100%;
 }
 
 input {
@@ -576,7 +657,7 @@ label {
   color: rgb(64, 82, 53);
 }
 
-@media screen and (max-height:1760px) {
+/* @media screen and (max-height:1760px) {
   
   .main {
     min-height: 3520px;
@@ -587,10 +668,26 @@ label {
   .experiences {
     min-height: 1760px;
   }
+} */
+
+button {
+  font-weight: 700;
+  font-size: 3rem;
+  width: 30rem;
+  border-radius: 50rem;
+  background-color: rgb(247, 246, 236);
+  border-color: rgb(201, 196, 140);
+  border: 2rem;
 }
-
-
-
+@media only screen and (max-width:992px), (max-height:1350px)  {
+  .sectionTitle {
+    font-size: 7rem;
+  }
+  .main .sectionTitle {
+    font-size: 7rem;
+  }
+}
+/* 
 @media only screen and (max-width:992px) {
   .main, .footer {
     font-size: 0.7rem;
@@ -607,4 +704,4 @@ label {
   .main, .footer {
     font-size: 0.3rem;
   }
-}
+} */
