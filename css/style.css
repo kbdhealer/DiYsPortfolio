@@ -32,15 +32,25 @@ body, html {
 }
 .hmbgBtnTgl {
   position: relative;
-  display: block;
+  display: flex;
+  flex-flow: column;
   width: max-content;
+  list-style-type: none;
+  padding : 1rem 1rem;
   
+  background: rgba(200, 200, 200, 0.829);
 }
 
+li a{
+  font-weight: 400;
+  font-size: 2.5rem;
+  text-decoration: none;
+  color: #3f4359;;
+}
 .bars {
   
   float: right;
-  margin: auto;
+  margin: 1rem;
   padding: 10px;
 }
 .bar1,
@@ -75,7 +85,7 @@ body, html {
 .introduce {
   margin: 0;
   padding: 0;
-  z-index: 1;
+  /* z-index: 1; */
   display: flex;
   min-height: 170rem;
   font-size: 2rem;
@@ -83,7 +93,7 @@ body, html {
 .bgArea {
   margin: 0;
   padding: 0;
-  z-index: -1;
+  /* z-index: -1; */
   background-image: url("../images/MK4_6838.JPG");
   background-size: cover;
   background-position: center;
@@ -101,7 +111,7 @@ body, html {
 }
 
 .introduceBox {
-  z-index: 2;
+  /* z-index: 2; */
   /* padding-top: 20%; */
   /* height: 60%; */
   width: 100%;
@@ -171,7 +181,9 @@ body, html {
 .mainDesc div #button1, #button2 {
   font-weight: 700;
   font-size: 3rem;
-  color: inherit;
+  color: #3f4359;
+  text-align: center;
+  text-decoration: none;
   width: 15rem;
   padding: 0.5rem;
   margin-top: 0.5rem;
@@ -183,11 +195,11 @@ body, html {
   box-shadow: 0.5rem 0.5rem 0.5rem rgb(121, 118, 116);
 }
 
-.mainDesc div #button1:hover {
-  background-color: rgb(54, 51, 19);
+.mainDesc div #button1:hover, #button2:hover {
+  background-color: rgb(245, 243, 221);
 }
 
-.mainDesc div #button1:active {
+.mainDesc div #button1:active, #button2:active{
   background-color: rgb(245, 243, 221);
   transform: translateY(0.3rem);
 }
@@ -202,7 +214,7 @@ body, html {
   padding-top: 3vmin;
 }
 .about {
-  z-index: 2;
+  /* z-index: 2; */
   /* height: 40%; */
   width: 100%;
   bottom: 0;
